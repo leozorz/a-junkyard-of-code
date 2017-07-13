@@ -4,32 +4,51 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace ConsoleApp7
 {
     class Program
     {
         static void Main(string[] args)
         {
-                Console.WriteLine("Enter numbers:");
-             int a = Convert.ToInt32(Console.ReadLine());
+            // First read in the number of doubles the user intends to enter.
+            Console.Write("Enter the number of values to average: ");
+     
+            int num = Convert.ToInt32(Console.ReadLine());
+           
+            // Now declare an array of that size.
 
-            Console.WriteLine("Enter numbers:");
-            int b = Convert.ToInt32(Console.ReadLine());
+            double[] doublesArray = new double[num]; // Here’s the ‘N’.
+                                                             // Accumulate the values into an array.
+            for (int i = 0; i < num; i++)
+            {
+                // Prompt the user for another double.
 
-            Console.WriteLine("Enter numbers:");
-            int c = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Enter numbers:");
-            int d = Convert.ToInt32(Console.ReadLine());
-
-            double avg = (a + b + c + d) / 4;
-            
-            Console.WriteLine("The average of {0}, {1}, {2}, {3} is: {4}", a, b, c, d, avg);
-
-            Console.WriteLine("Press any key...");
-            Console.ReadLine();
-
-
+                Console.Write("enter double #" + (i + 1) + ": ");
+string val = Console.ReadLine();
+                double value = Convert.ToDouble(val);
+                // Add this to the array using bracket notation.
+                doublesArray[i] = value;
+            }
+            // Accumulate ‘numElements’ values from
+            // the array in the variable sum.
+            double sum = 0;
+            for (int i = 0; i < num; i++)
+            {
+                sum = sum + doublesArray[i];
+            }
+            // Now calculate the average.
+            double average = sum / num;
+            // Output the results in an attractive format.
+            Console.WriteLine();
+            Console.Write(average + " is the average of(");
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write (+doublesArray[i] + "; ");
+            }
+            Console.WriteLine(") / " +num);
+            // Wait for user to acknowledge the results.
+            Console.WriteLine("Press Enter to terminate...");
+            Console.Read();
         }
     }
 }
