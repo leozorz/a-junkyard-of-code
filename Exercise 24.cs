@@ -3,11 +3,6 @@ public class Exercise24
 {
     public static void Main()
     {
-        //  Console.WriteLine("Find the biggest word in the line:\n");
-
-        //        string line = "Write a C# Sharp Program to display the following pattern using the alphabet.";
-
-        //Console.WriteLine(line + "\n");
 
         Console.WriteLine("Choose your string.");
         string line = Console.ReadLine();
