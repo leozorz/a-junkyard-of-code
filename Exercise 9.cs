@@ -24,7 +24,7 @@ namespace ConsoleApp7
                 // Prompt the user for another double.
 
                 Console.Write("enter double #" + (i + 1) + ": ");
-string val = Console.ReadLine();
+                string val = Console.ReadLine();
                 double value = Convert.ToDouble(val);
                 // Add this to the array using bracket notation.
                 doublesArray[i] = value;
